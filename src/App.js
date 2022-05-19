@@ -10,6 +10,7 @@ import Navbars from './Navbar/Navbars';
 import Home from './Home/Home';
 import Register from './Login/Register';
 import Task from './Home/Task';
+import RequireAuth from './RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -18,12 +19,22 @@ function App() {
       <Routes>
 
 
-        <Route path='/' element={<Home></Home>}></Route>
-        <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='/' element={
+          <RequireAuth>
+            <Home></Home>
+          </RequireAuth>
+        }></Route>
+        <Route path='/home' element={
+          <RequireAuth>
+
+            <Home></Home>
+          </RequireAuth>
+        }></Route>
         {/* <Route path='/service/:id' element={<Task></Task>}></Route> */}
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
       </Routes>
+      <ToastContainer></ToastContainer>
 
     </div>
   );

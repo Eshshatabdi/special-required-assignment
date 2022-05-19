@@ -81,7 +81,7 @@ const Login = () => {
                     Login
                 </Button>
             </Form>
-            <p>New to doctors chamber? <Link to='/register' className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
+            <p>New in app? <Link to='/register' className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
             <p>Forget Password? <button to='/register' className='btn btn-link pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
 
 
