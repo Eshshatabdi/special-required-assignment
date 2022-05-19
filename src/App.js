@@ -8,6 +8,8 @@ import { Route, Routes } from 'react-router-dom';
 import Login from './Login/Login';
 import Navbars from './Navbar/Navbars';
 import Home from './Home/Home';
+import Register from './Login/Register';
+import Task from './Home/Task';
 
 function App() {
   return (
@@ -17,7 +19,10 @@ function App() {
 
 
         <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/home' element={<Home></Home>}></Route>
+        {/* <Route path='/service/:id' element={<Task></Task>}></Route> */}
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/register' element={<Register></Register>}></Route>
       </Routes>
 
     </div>
